@@ -1,0 +1,10 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "no-loop-func": 0
+  }
+  "extends": "leisurelink"
+}

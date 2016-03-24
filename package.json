@@ -1,0 +1,29 @@
+{
+  "name": "@leisurelink/skinny-event-loggins",
+  "version": "1.0.0",
+  "description": "Simple package that exposes a logger class for emitting events upon log methods. Works well with @leisurelink/skinny-loggins",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeisureLink/skinny-event-loggins.git"
+  },
+  "keywords": [
+    "skinny-loggins",
+    "event",
+    "logging"
+  ],
+  "author": "LeisureLink Tech <techteam@leisurelink.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeisureLink/skinny-event-loggins/issues"
+  },
+  "homepage": "https://github.com/LeisureLink/skinny-event-loggins#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "lodash": "^4.6.1",
+    "mocha": "^2.4.5"
+  }
+}
