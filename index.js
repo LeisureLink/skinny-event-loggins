@@ -43,7 +43,7 @@ function Logger(namespace, eventSink) {
     return Logger(result.join(separator || ':'), sink);
   }
 
-  let methods = { log: log, withNamespace: withNamespace };
+  let methods = { sink: sink, withNamespace: withNamespace };
 
   for (let kind of KINDS) {
     methods[kind] = (message, err) => {
