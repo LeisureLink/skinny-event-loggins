@@ -91,7 +91,7 @@ describe('Logger', () => {
 
       it('the new logger should log with the correct namespace', () => {
         return checkSingle(()=>namedLogger.info('test'), (event) => {
-          expect(event.namespace).to.equal('original:bob');
+          expect(event.namespace).to.equal('original.bob');
         });
       });
 

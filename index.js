@@ -40,7 +40,7 @@ function Logger(namespace, eventSink) {
    */
   const withNamespace = (ns, separator) => {
     let result = (separator !== false && namespace) ? [namespace, ns] : [ns];
-    return Logger(result.join(separator || ':'), sink);
+    return Logger(result.join(separator || '.'), sink);
   }
 
   let methods = { on: sink.on.bind(sink), withNamespace: withNamespace };
