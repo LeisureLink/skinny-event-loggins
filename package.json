@@ -1,6 +1,6 @@
 {
   "name": "@leisurelink/skinny-event-loggins",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Simple package that exposes a logger class for emitting events upon log methods. Works well with @leisurelink/skinny-loggins",
   "main": "index.js",
   "scripts": {
