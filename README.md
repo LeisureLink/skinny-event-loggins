@@ -11,9 +11,14 @@ No dependencies, pure emit of log events, simple to use.
 ```javascript
 const Logger = require('@leisurelink/skinny-event-loggins');
 const log = Logger('my-namespace');
+
+const skinny = new (require('@leisurelink/skinny-loggins'));
+skinny.consumeFrom(log);
+
+// - or -
 const realLogger = require('winston');
 
-log.sink.on('log', function(ev){
+log.on('log', function(ev){
   realLogger[ev.kind](ev.namespace + ' - ' + ev.message, ev.err);
 });
 
@@ -28,6 +33,9 @@ Create a logger with the specified namespace (optional) and the specified event 
 
 ### [silly|debug|verbose|info|warn|error(message, err)
 Log a message of the specified level with optional error
+
+### on(event, handler)
+Subscribes to events from the logger.
 
 ### withNamespace(namespace, separator)
 Creates a child logger with the specified namespace. If the current logger has a namespace, the new namespace is created to look like 'old:new'. Use the `separator` parameter to specify a different separator than ':'. If `separator === false`, then the new namespace will not include the old.
